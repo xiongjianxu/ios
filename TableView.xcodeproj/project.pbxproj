@@ -19,6 +19,8 @@
 		492CC94319405F920026422A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492CC92B19405F920026422A /* UIKit.framework */; };
 		492CC94B19405F920026422A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 492CC94919405F920026422A /* InfoPlist.strings */; };
 		492CC94D19405F920026422A /* TableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 492CC94C19405F920026422A /* TableViewTests.m */; };
+		492CC95A194060040026422A /* AboutAJKListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 492CC957194060040026422A /* AboutAJKListTableViewCell.m */; };
+		492CC95B194060040026422A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492CC959194060040026422A /* FirstViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		492CC94819405F920026422A /* TableViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableViewTests-Info.plist"; sourceTree = "<group>"; };
 		492CC94A19405F920026422A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		492CC94C19405F920026422A /* TableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewTests.m; sourceTree = "<group>"; };
+		492CC956194060040026422A /* AboutAJKListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutAJKListTableViewCell.h; sourceTree = "<group>"; };
+		492CC957194060040026422A /* AboutAJKListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutAJKListTableViewCell.m; sourceTree = "<group>"; };
+		492CC958194060040026422A /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		492CC959194060040026422A /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,10 @@
 		492CC92D19405F920026422A /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				492CC956194060040026422A /* AboutAJKListTableViewCell.h */,
+				492CC957194060040026422A /* AboutAJKListTableViewCell.m */,
+				492CC958194060040026422A /* FirstViewController.h */,
+				492CC959194060040026422A /* FirstViewController.m */,
 				492CC93619405F920026422A /* AppDelegate.h */,
 				492CC93719405F920026422A /* AppDelegate.m */,
 				492CC93919405F920026422A /* Images.xcassets */,
@@ -241,6 +251,8 @@
 			files = (
 				492CC93819405F920026422A /* AppDelegate.m in Sources */,
 				492CC93419405F920026422A /* main.m in Sources */,
+				492CC95A194060040026422A /* AboutAJKListTableViewCell.m in Sources */,
+				492CC95B194060040026422A /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,10 +369,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TableView/TableView-Prefix.pch";
 				INFOPLIST_FILE = "TableView/TableView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -370,10 +385,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TableView/TableView-Prefix.pch";
 				INFOPLIST_FILE = "TableView/TableView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -437,6 +455,7 @@
 				492CC95219405F920026422A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		492CC95319405F920026422A /* Build configuration list for PBXNativeTarget "TableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +464,7 @@
 				492CC95519405F920026422A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
