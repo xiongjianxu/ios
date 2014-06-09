@@ -25,7 +25,6 @@
 - (void)awakeFromNib
 {
     // Initialization code
-    
 }
 
 - (UIView *)topLineView
@@ -92,7 +91,8 @@
             self.bottomLineView.frame = CGRectMake(0, 44, 320, 1);    }
     
     if (self.shortLineView.superview) {
-            self.shortLineView.frame = CGRectMake(20, 0, 320, 1);    }
+            self.shortLineView.frame = CGRectMake(20, 0, 320 - 20, 1);    }
     
 }
+
 @end

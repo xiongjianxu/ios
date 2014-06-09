@@ -25,8 +25,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.sectionArray = @[@1, @2, @3];
-        self.cellTitleArray = @[@[@1], @[@1, @2],@[@1, @2, @3]];
+        self.sectionArray = @[@1, @1, @3, @2];
+        self.cellTitleArray = @[@[@1], @[@1],@[@1, @2, @3], @[@1, @2]];
     }
     return self;
 }
@@ -89,6 +89,7 @@
         cell = [[AboutAJKListTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"identifierCell"];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+    self.cellName = [[UILabel alloc] init];
     self.cellName.frame = CGRectMake(20, 20, 200, 50) ;
     [cell addSubview:self.cellName];
     
