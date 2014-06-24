@@ -7,14 +7,13 @@
 //
 
 #import "FirstViewController.h"
-#import "AboutAJKListTableViewCell.h"
+#import "AJKListTableViewCell.h"
 
 
 @interface FirstViewController ()
 
 @property (nonatomic, strong) NSArray *sectionArray;
 @property (nonatomic, strong) NSArray *cellTitleArray;
-@property (nonatomic, strong) UILabel *cellName;
 
 @end
 
@@ -25,8 +24,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.sectionArray = @[@1, @1, @3, @2];
-        self.cellTitleArray = @[@[@1], @[@1],@[@1, @2, @3], @[@1, @2]];
+        self.sectionArray = @[@5];
+        self.cellTitleArray = @[@[@"1", @"2", @"3", @"4", @"5"]];
     }
     return self;
 }
@@ -84,14 +83,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *identifier = @"identifierCell";
-    AboutAJKListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    AJKListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
-        cell = [[AboutAJKListTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"identifierCell"];
+        cell = [[AJKListTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"identifierCell"];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-    self.cellName = [[UILabel alloc] init];
-    self.cellName.frame = CGRectMake(20, 20, 200, 50) ;
-    [cell addSubview:self.cellName];
     
     NSString *cellString = [[self.cellTitleArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     

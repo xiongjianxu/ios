@@ -6,21 +6,22 @@
 //  Copyright (c) 2014年 anjuke inc. All rights reserved.
 //
 
-#import "AboutAJKListTableViewCell.h"
+#import "AJKListTableViewCell.h"
 
-@interface AboutAJKListTableViewCell ()
+@interface AJKListTableViewCell ()
 
-@property (strong, nonatomic) UILabel *cellName;
+
 @property (strong, nonatomic) UIView *topLineView;
 @property (strong, nonatomic) UIView *bottomLineView;
 @property (strong, nonatomic) UIView *shortLineView;
 
+@property (strong, nonatomic) UILabel *cellName;
 @property (nonatomic, assign) NSInteger totalRow;
 @property (nonatomic, strong) NSIndexPath *indexPath;
 
 @end
 
-@implementation AboutAJKListTableViewCell
+@implementation AJKListTableViewCell
 
 - (void)awakeFromNib
 {
@@ -63,7 +64,11 @@
 
 - (void)configWithData:(NSDictionary *)dic
 {
+    self.cellName = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 200, 30)];
+    [self.contentView addSubview:self.cellName];
     self.cellName.text = dic[@"title"];
+    self.cellName.font = [UIFont systemFontOfSize:15];
+    
 }
 
 - (void)drawLineWithIndexPath:(NSIndexPath *)indexPath sectionTotalRow:(NSInteger)totalRow
