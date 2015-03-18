@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27BDE0A51AB9B97600DBF0DA /* FirstWeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BDE0A41AB9B97600DBF0DA /* FirstWeekViewController.m */; };
+		27BDE0A81AB9BC2700DBF0DA /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BDE0A71AB9BC2700DBF0DA /* BaseNavigationController.m */; };
 		492CC92819405F920026422A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492CC92719405F910026422A /* Foundation.framework */; };
 		492CC92A19405F920026422A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492CC92919405F920026422A /* CoreGraphics.framework */; };
 		492CC92C19405F920026422A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492CC92B19405F920026422A /* UIKit.framework */; };
@@ -19,8 +21,8 @@
 		492CC94319405F920026422A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 492CC92B19405F920026422A /* UIKit.framework */; };
 		492CC94B19405F920026422A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 492CC94919405F920026422A /* InfoPlist.strings */; };
 		492CC94D19405F920026422A /* TableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 492CC94C19405F920026422A /* TableViewTests.m */; };
-		492CC95A194060040026422A /* AJKListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 492CC957194060040026422A /* AJKListTableViewCell.m */; };
-		492CC95B194060040026422A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492CC959194060040026422A /* FirstViewController.m */; };
+		492CC95A194060040026422A /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 492CC957194060040026422A /* ListTableViewCell.m */; };
+		492CC95B194060040026422A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492CC959194060040026422A /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27BDE0A31AB9B97600DBF0DA /* FirstWeekViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstWeekViewController.h; path = TableView/WeeksViewController/FirstWeekViewController.h; sourceTree = "<group>"; };
+		27BDE0A41AB9B97600DBF0DA /* FirstWeekViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstWeekViewController.m; path = TableView/WeeksViewController/FirstWeekViewController.m; sourceTree = "<group>"; };
+		27BDE0A61AB9BC2700DBF0DA /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		27BDE0A71AB9BC2700DBF0DA /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		492CC92419405F910026422A /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		492CC92719405F910026422A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		492CC92919405F920026422A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -42,18 +48,18 @@
 		492CC93119405F920026422A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		492CC93319405F920026422A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		492CC93519405F920026422A /* TableView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TableView-Prefix.pch"; sourceTree = "<group>"; };
-		492CC93619405F920026422A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		492CC93719405F920026422A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		492CC93619405F920026422A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TableView/AppDelegate.h; sourceTree = "<group>"; };
+		492CC93719405F920026422A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TableView/AppDelegate.m; sourceTree = "<group>"; };
 		492CC93919405F920026422A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		492CC93F19405F920026422A /* TableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		492CC94019405F920026422A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		492CC94819405F920026422A /* TableViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableViewTests-Info.plist"; sourceTree = "<group>"; };
 		492CC94A19405F920026422A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		492CC94C19405F920026422A /* TableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewTests.m; sourceTree = "<group>"; };
-		492CC956194060040026422A /* AJKListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJKListTableViewCell.h; sourceTree = "<group>"; };
-		492CC957194060040026422A /* AJKListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJKListTableViewCell.m; sourceTree = "<group>"; };
-		492CC958194060040026422A /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		492CC959194060040026422A /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		492CC956194060040026422A /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
+		492CC957194060040026422A /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
+		492CC958194060040026422A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		492CC959194060040026422A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +86,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27BDE0A21AB9B95700DBF0DA /* WeeksViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27BDE0A31AB9B97600DBF0DA /* FirstWeekViewController.h */,
+				27BDE0A41AB9B97600DBF0DA /* FirstWeekViewController.m */,
+			);
+			name = WeeksViewController;
+			sourceTree = "<group>";
+		};
 		492CC91B19405F910026422A = {
 			isa = PBXGroup;
 			children = (
+				492CC93619405F920026422A /* AppDelegate.h */,
+				492CC93719405F920026422A /* AppDelegate.m */,
+				27BDE0A61AB9BC2700DBF0DA /* BaseNavigationController.h */,
+				27BDE0A71AB9BC2700DBF0DA /* BaseNavigationController.m */,
+				27BDE0A21AB9B95700DBF0DA /* WeeksViewController */,
 				492CC92D19405F920026422A /* TableView */,
 				492CC94619405F920026422A /* TableViewTests */,
 				492CC92619405F910026422A /* Frameworks */,
@@ -113,12 +133,10 @@
 		492CC92D19405F920026422A /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				492CC956194060040026422A /* AJKListTableViewCell.h */,
-				492CC957194060040026422A /* AJKListTableViewCell.m */,
-				492CC958194060040026422A /* FirstViewController.h */,
-				492CC959194060040026422A /* FirstViewController.m */,
-				492CC93619405F920026422A /* AppDelegate.h */,
-				492CC93719405F920026422A /* AppDelegate.m */,
+				492CC956194060040026422A /* ListTableViewCell.h */,
+				492CC957194060040026422A /* ListTableViewCell.m */,
+				492CC958194060040026422A /* HomeViewController.h */,
+				492CC959194060040026422A /* HomeViewController.m */,
 				492CC93919405F920026422A /* Images.xcassets */,
 				492CC92E19405F920026422A /* Supporting Files */,
 			);
@@ -251,8 +269,10 @@
 			files = (
 				492CC93819405F920026422A /* AppDelegate.m in Sources */,
 				492CC93419405F920026422A /* main.m in Sources */,
-				492CC95A194060040026422A /* AJKListTableViewCell.m in Sources */,
-				492CC95B194060040026422A /* FirstViewController.m in Sources */,
+				492CC95A194060040026422A /* ListTableViewCell.m in Sources */,
+				27BDE0A81AB9BC2700DBF0DA /* BaseNavigationController.m in Sources */,
+				492CC95B194060040026422A /* HomeViewController.m in Sources */,
+				27BDE0A51AB9B97600DBF0DA /* FirstWeekViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

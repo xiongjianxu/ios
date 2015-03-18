@@ -8,11 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AJKListTableViewCell : UITableViewCell
-@property (nonatomic)NSInteger shortLineViewIndentation;
+@interface ListTableViewCell : UITableViewCell
 
 - (void)configWithData:(NSDictionary *)dic;
-
-- (void)drawLineWithIndexPath:(NSIndexPath *)indexPath sectionTotalRow:(NSInteger)totalRow;
 
 @end

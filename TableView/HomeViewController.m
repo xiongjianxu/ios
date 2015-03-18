@@ -6,49 +6,43 @@
 //  Copyright (c) 2013年 xubing. All rights reserved.
 //
 
-#import "FirstViewController.h"
-#import "AJKListTableViewCell.h"
+#import "HomeViewController.h"
+#import "ListTableViewCell.h"
+#import "FirstWeekViewController.h"
 
+@interface HomeViewController ()
 
-@interface FirstViewController ()
-
+@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *sectionArray;
 @property (nonatomic, strong) NSArray *cellTitleArray;
 
 @end
 
-@implementation FirstViewController
+@implementation HomeViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (UITableView *)tableView
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        self.sectionArray = @[@5];
-        self.cellTitleArray = @[@[@"1", @"2", @"3", @"4", @"5"]];
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height) style:UITableViewStylePlain];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.scrollEnabled = YES;
     }
-    return self;
+    return _tableView;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.sectionArray = @[@5];
+    self.cellTitleArray = @[@[@"第1次随堂", @"第2次随堂", @"第3次随堂", @"第4次随堂", @"第5次随堂"]];
+    [self.view addSubview:self.tableView];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height) style:UITableViewStylePlain];
-    tableView.dataSource = self;
-    tableView.delegate = self;
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    //    tableView.tableHeaderView = [self headView];
-    tableView.scrollEnabled = YES;
-    tableView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:tableView];
-    [tableView reloadData];
-}
-
 #pragma mark - delegate
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
  
     return self.sectionArray.count;
@@ -83,19 +77,41 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *identifier = @"identifierCell";
-    AJKListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    ListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
-        cell = [[AJKListTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"identifierCell"];
+        cell = [[ListTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"identifierCell"];
     }
-    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     
     NSString *cellString = [[self.cellTitleArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     
     NSDictionary *celldata = @{@"title":cellString};
-    int sectionTotalRow = [[self.sectionArray objectAtIndex:indexPath.section] integerValue];
     [cell configWithData:celldata];
-    [cell drawLineWithIndexPath:indexPath sectionTotalRow:sectionTotalRow];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    if (indexPath.row % 2 == 0) {
+//        cell.backgroundColor = [UIColor redColor];
+//    } else {
+//        cell.backgroundColor = [UIColor blueColor];
+//    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.row) {
+        case 0:
+        {
+            FirstWeekViewController *firstWeekVC = [[FirstWeekViewController alloc] init];
+            [self.navigationController pushViewController:firstWeekVC animated:YES];
+            break;
+        }
+            
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning
