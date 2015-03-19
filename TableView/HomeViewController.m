@@ -35,6 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.title = @"作业本";
     self.sectionArray = @[@5];
     self.cellTitleArray = @[@[@"第1次随堂", @"第2次随堂", @"第3次随堂", @"第4次随堂", @"第5次随堂"]];
     [self.view addSubview:self.tableView];
