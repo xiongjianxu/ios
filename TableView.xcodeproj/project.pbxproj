@@ -23,6 +23,7 @@
 		492CC94D19405F920026422A /* TableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 492CC94C19405F920026422A /* TableViewTests.m */; };
 		492CC95A194060040026422A /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 492CC957194060040026422A /* ListTableViewCell.m */; };
 		492CC95B194060040026422A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492CC959194060040026422A /* HomeViewController.m */; };
+		C20242F21AC011C300B70297 /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20242F11AC011C300B70297 /* BuyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		492CC957194060040026422A /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
 		492CC958194060040026422A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		492CC959194060040026422A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		C20242F01AC011C300B70297 /* BuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BuyViewController.h; path = TableView/WeeksViewController/BuyViewController.h; sourceTree = "<group>"; };
+		C20242F11AC011C300B70297 /* BuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BuyViewController.m; path = TableView/WeeksViewController/BuyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 			children = (
 				27BDE0A31AB9B97600DBF0DA /* FirstWeekViewController.h */,
 				27BDE0A41AB9B97600DBF0DA /* FirstWeekViewController.m */,
+				C20242F01AC011C300B70297 /* BuyViewController.h */,
+				C20242F11AC011C300B70297 /* BuyViewController.m */,
 			);
 			name = WeeksViewController;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				492CC93419405F920026422A /* main.m in Sources */,
 				492CC95A194060040026422A /* ListTableViewCell.m in Sources */,
 				27BDE0A81AB9BC2700DBF0DA /* BaseNavigationController.m in Sources */,
+				C20242F21AC011C300B70297 /* BuyViewController.m in Sources */,
 				492CC95B194060040026422A /* HomeViewController.m in Sources */,
 				27BDE0A51AB9B97600DBF0DA /* FirstWeekViewController.m in Sources */,
 			);

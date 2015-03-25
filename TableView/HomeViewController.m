@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "ListTableViewCell.h"
 #import "FirstWeekViewController.h"
+#import "BuyViewController.h"
 
 @interface HomeViewController ()
 
@@ -109,7 +110,12 @@
             [self.navigationController pushViewController:firstWeekVC animated:YES];
             break;
         }
-            
+        case 1:
+        {
+            BuyViewController *buyVC = [[BuyViewController alloc] init];
+            [self.navigationController pushViewController:buyVC animated:YES];
+            break;
+        }
         default:
             break;
     }
